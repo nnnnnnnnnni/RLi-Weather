@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0085e5",
+    "navigationBarTitleText": "日丽天气",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "定位以获取当前位置天气信息"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<view class='container'>
+  <image class='bg' style='height:{{SysHeight}}' src="{{bcgImgList[0]['src']}}"></image>
+  
+  <view class='searchtext'>
+    <input bindconfirm='Search' confirm-type='search' placeholder-class='phclass' placeholder='请输入城市名字，快速查询天气'></input>
+  </view>
+
+  <view class='preview'>
+    <view class='top'>
+      <image class='location' src='../../imgs/dingwei.png'></image>
+      <view class='loca'>{{location}}</view>
+      <view class='updatetime'>{{updatetime}} 更新</view>
+    </view>
+
+    <view class='info'>
+      <view class='item temp'>{{temp}}
+      </view>
+      <view class='bot'>
+        <view class='item weathertype'>{{weathertype}}</view>
+        <view class='item nengjiandu'>能见度{{nengjiandu}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='fore'>
+    <view class='top'>{{length}}天预报</view>
+    <view class='bot'>
+      <view class='item' wx:for='{{foreList}}'>
+        <view class='time'>{{item.time}}</view>
+        <view class='temp'>{{item.max}}~{{item.min}}℃</view>
+        <view class='type'>{{item.type}}</view>
+        <view class='cloud'>{{item.wind_x}}{{item.wind_l}}级</view>
+    </view>
+    </view>
+  </view>
+
+  <view class='table'>
+    <view class='item'>温度 <view class='num'>{{tableList.temp}}</view></view>
+    <view class='item'>体感温度<view class='num'>{{tableList.bodytemp}}</view></view>
+    <view class='item'>相对湿度<view class='num'>{{tableList.humidity}}</view></view>
+    <view class='item'>降水量<view class='num'>{{tableList.rain}}</view></view>
+    <view class='item'>风向<view class='num'>{{tableList.windx}}</view></view>
+    <view class='item'>风力<view class='num'>{{tableList.windl}}</view></view>
+    <view class='item'>风速<view class='num'>{{tableList.winds}}</view></view>
+    <view class='item'>能见度<view class='num'>{{tableList.nengjiandu}}</view></view>
+    <view class='item'>气压<view class='num'>{{tableList.p}}</view></view>
+    <view class='item'>云量<view class='num'>{{tableList.cloud}}</view></view>
+  </view>
+
+</view>
